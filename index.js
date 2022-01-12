@@ -15,21 +15,10 @@ function mondayWork(task = 'go to the office') {
 }
 
 //function3
-function wrapAdjective(msg = 'You are') {
-    return function(*) {msg
-    return
+function wrapAdjective(flair = '*') {
+    return function(title = 'special') {
+        return `You are ${flair}${title}${flair}!`
     }
-}
+    }
+    wrapAdjective("%")("a dedicated programmer");
 
-/*Implement a function called wrapAdjective:
-
-It should return a function
-This "inner" function should:
-take a single parameter that should default to "special". Name it however you wish.
-return a String of the form "You are ..." where ... should be the adjective this function received wrapped in visual flair
-It should take as parameter a String that will be used to create visual flair
-You may call the parameter whatever you like, but its default value should be "*"
-Call example: const encouragingPromptFunction = wrapAdjective("!!!")
-function outer(greeting, msg = "It's a fine day to learn") {
-  return function (name, lang = "Python") {
-    return `${greeting}, ${name}! ${msg} ${lang}`; */
